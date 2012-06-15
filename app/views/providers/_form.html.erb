@@ -1,0 +1,56 @@
+
+<%= form_for @provider ,:html => {:id => "formID"} do |f| %>
+  <%= f.error_messages %>
+  
+    <%= f.label :name , "NOME"  %><br />
+    <%= f.text_field :name , :class =>"a_content1_input validate[required]"  %>
+    
+  
+    <%= f.label :last_name, "SOBRENOME"  %><br />
+    <%= f.text_field  :last_name , :class =>"a_content1_input validate[required]" %>
+    
+  
+    <%= f.label :address , "ENDEREÇO"  %><br />
+    <%= f.text_field :address , :class =>"a_content1_input validate[required]"  %>
+    
+  
+    <%= f.label :city, "CIDADE"  %><br />
+    <%= f.text_field :city , :class =>"a_content1_input validate[required]"  %>
+    
+    <%= f.label :state, "ESTADO:", :class =>"uf dk validate[required]"%> 
+    <%= f.select :state, ([["AC", "AC"], ["AL","AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PA", "PA"], ["PB", "PB"], ["PR", "PR"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SP", "SP"], ["SE", "SE"], ["TO", "TO"]]), :class= => "uf dk validate[required]" %> <br /><br />
+  
+    <%= f.label :zip_code, "CEP"  %><label style="margin-left:195px;">TELEFONE</label><br />
+    <%= f.text_field :zip_code , :class =>"a_content1_input_cep validate[required]" %>
+    <%= f.text_field :phone , :class=>"a_content1_input_tel validate[required]"%>    
+    
+    <br />
+    <%= f.label :mobile , "Celular" %><br />
+    <%= f.text_field :mobile , :class =>"a_content1_input validate[required]" %>
+    
+  
+    <%= f.label :e_mail , "EMAIL"  %><br />
+    <%= f.text_field :e_mail,:id => "email",:name =>"email"  , :class =>"validate[required,custom[email]]" %>
+    
+  
+    <%= f.label :category, "CATEGORIA", :class =>"categoria dk validate[required]" %> 
+    <%= f.select :category, ([["teste1", "teste1"], ["teste2", "teste2"], ["teste3", "teste3"]]) %> <br /><br />
+  
+    <br /><br /><br /><br /><br /><br /><br />
+    <%= image_tag("tit_sua_empresa.png") %><br />
+    <%= f.label :business , "NOME DA EMPRESA" %><br />
+    <%= f.text_field :business , :class =>"a_content1_input validate[required]" %>
+  
+    <%= f.label :area_of_​​expertise, "ÀREA DE ESPECIALIDADE", :class =>"categoria dk validate[required]" %> 
+    <%= f.select :area_of_​​expertise, ([["teste1", "teste1"], ["teste2", "teste2"], ["teste3", "teste3"]]) %> <br /><br />
+  
+    <%= f.label :business_phone, "TELEFONE"  %><br />
+    <%= f.text_field :business_phone , :class =>"a_content1_input validate[required]" %>
+  
+    <%= f.label :availability, "DISPONIBILIDADE", :class =>"categoria dk validate[required]" %> 
+    <%= f.select :availability, ([["teste1", "teste1"], ["teste2", "teste2"], ["teste3", "teste3"]]) %> <br /><br />  
+
+    <%= f.label :performance_field, "ÀREA DE ATUAÇÃO", :class =>"categoria dk validate[required]" %> 
+    <%= f.select :performance_field, ([["teste1", "teste1"], ["teste2", "teste2"], ["teste3", "teste3"]]) %> <br /><br />  
+  <%= image_submit_tag("bt_cadastrar.png", :style =>"float:right;")%>
+<% end %>

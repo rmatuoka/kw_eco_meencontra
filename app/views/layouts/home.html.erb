@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= content_for?(:title) ? "Ecoverde - " + yield(:title) : "Ecoverde" %></title>
+<%= stylesheet_link_tag "reset.css"%>
+<%= stylesheet_link_tag "home.css"%>
+<%= javascript_include_tag "javascripts/jquery.js" %>
+<script>
+jQuery.noConflict();
+</script>
+
+</head>
+<body>
+<div id='section'>
+	<div id='header'>
+    	<div id='h_logo'>
+        	<a href="index.html"><img src="images/logo.png" border="0"/></a>
+        </div>
+        <div id='h_info'>
+        	<a href="comofunciona.html"><img src="images/bt_como_funciona.png" border="0"/></a>
+        </div>
+    </div>
+    <div id='article'>
+    	<div id='a_text'>
+        	<img src="images/tit_seja_bem_vindo.png" border="0"/>
+            <p>Preparamos esta ferramenta para que você possa encontrar com rapidez e segurança os profissionais mais indicados para sua obra. Este espaço permite também que você faça seu cadastro para ser encontrado por outros profissionais. Selecione abaixo o que você deseja fazer.</p>
+        </div>
+    	<div id='a_button1'>
+        	<%= link_to image_tag("bt_sou_profissional.png"), new_provider_path %>
+        </div>
+        <div id='a_button2'>
+            <%= link_to image_tag("bt_quero_encontrar.png"), "" %>
+        </div>
+    </div>
+    <div id='footer'>
+    	<div id='f_left'>
+        	<p>ecoverde © Todos os direitos reservados</p>
+        </div>
+        <div id='f_right'>
+        	<a href="providers">termos</a>|<a href="#">política</a><a href="#"><img src="images/bt_facebook.png" border="0"/></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<% title "Provider" %>
+    <div id='article'>
+
+    	<div id='a_content1' style="width: 570px !important; margin-top: 50px !important;">
+        	<h2>Parabéns!</h2>
+        	<p class="a_text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis pharetra odio. Nam a purus orci. Sed sit amet dapibus est. Vestibulum vel commodo turpis. Nunc ligula quam, malesuada sit amet ornare sit amet, aliquam a lorem. Aliquam non elit in ante viverra eleifend.</p>
+        </div>
+        
+    </div>
+<p>
+  <strong>Name:</strong>
+  <%= @provider.name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @provider.last_name %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @provider.address %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @provider.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @provider.state %>
+</p>
+<p>
+  <strong>Zip Code:</strong>
+  <%= @provider.zip_code %>
+</p>
+<p>
+  <strong>Number:</strong>
+  <%= @provider.number %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @provider.phone %>
+</p>
+<p>
+  <strong>Mobile:</strong>
+  <%= @provider.mobile %>
+</p>
+<p>
+  <strong>E-Mail:</strong>
+  <%= @provider.e_mail %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @provider.category %>
+</p>
+<p>
+  <strong>Business:</strong>
+  <%= @provider.business %>
+</p>
+<p>
+  <strong>Area Of ​​expertise:</strong>
+  <%= @provider.area_of_​​expertise %>
+</p>
+<p>
+  <strong>Business Phone:</strong>
+  <%= @provider.business_phone %>
+</p>
+<p>
+  <strong>Availability:</strong>
+  <%= @provider.availability %>
+</p>
+<p>
+  <strong>Performance Field:</strong>
+  <%= @provider.performance_field %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_provider_path(@provider) %> |
+  <%= link_to "Destroy", @provider, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", providers_path %>
+</p>

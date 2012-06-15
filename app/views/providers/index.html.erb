@@ -1,0 +1,47 @@
+<% title "Providers" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
+    <th>Number</th>
+    <th>Phone</th>
+    <th>Mobile</th>
+    <th>E-Mail</th>
+    <th>Category</th>
+    <th>Business</th>
+    <th>Area Of ​​expertise</th>
+    <th>Business Phone</th>
+    <th>Availability</th>
+    <th>Performance Field</th>
+  </tr>
+  <% for provider in @providers %>
+    <tr>
+      <td><%= provider.name %></td>
+      <td><%= provider.last_name %></td>
+      <td><%= provider.address %></td>
+      <td><%= provider.city %></td>
+      <td><%= provider.state %></td>
+      <td><%= provider.zip_code %></td>
+      <td><%= provider.number %></td>
+      <td><%= provider.phone %></td>
+      <td><%= provider.mobile %></td>
+      <td><%= provider.e_mail %></td>
+      <td><%= provider.category %></td>
+      <td><%= provider.business %></td>
+      <td><%= provider.area_of_​​expertise %></td>
+      <td><%= provider.business_phone %></td>
+      <td><%= provider.availability %></td>
+      <td><%= provider.performance_field %></td>
+      <td><%= link_to "Show", provider %></td>
+      <td><%= link_to "Edit", edit_provider_path(provider) %></td>
+      <td><%= link_to "Destroy", provider, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Provider", new_provider_path %></p>

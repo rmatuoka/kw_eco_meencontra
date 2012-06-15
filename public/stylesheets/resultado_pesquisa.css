@@ -1,0 +1,60 @@
+body{
+	
+	}
+
+#resultado_pesquisa h1{
+	color:#a3cd39;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	text-transform:uppercase;
+	}
+
+#resultado_pesquisa p{
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	}
+
+#resultado_pesquisa h2{
+	color:#6d929a;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	}
+
+form{
+	margin-top:20px;
+	}
+
+.input_resultado{
+	background: rgba(0, 0, 0, 0.2);
+	border:1px solid transparent;
+	border-radius: 10px;
+	width:100%;
+	height:37px;
+	margin-bottom:5px;
+	padding-left:10px;
+	color:#708e95;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	}
+
+.textarea_resultado{
+	background: rgba(0, 0, 0, 0.2);
+	border:1px solid transparent;
+	border-radius: 10px;
+	width:100%;
+	height:150px;
+	margin-bottom:5px;
+	padding-left:10px;
+	color:#708e95;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	resize:none;
+	}
+
+.bt_enviar{
+	float:right
+	}

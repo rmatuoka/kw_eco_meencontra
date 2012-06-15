@@ -1,5 +1,11 @@
 KwEcoMeencontra::Application.routes.draw do
 
+  get "search/index"
+
+  resources :providers
+
+  get "home/index"
+
   resources :user_sessions
   resources :users
   resources :password_resets
@@ -17,7 +23,7 @@ KwEcoMeencontra::Application.routes.draw do
   }
   #Final do namespace Admin
   
-  root :to => "user_sessions#new"
+  root :to => "home#index"
   match 'cadastro' => "users#new"
   match 'login' => 'user_sessions#new'  
   match 'logout' => 'user_sessions#destroy'  

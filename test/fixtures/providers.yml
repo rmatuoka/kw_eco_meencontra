@@ -1,0 +1,35 @@
+one:
+  name: MyString
+  last_name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  number: 1
+  phone: MyString
+  mobile: MyString
+  e-mail: MyString
+  category: MyString
+  business: MyString
+  area_of_​​expertise: MyString
+  business_phone: MyString
+  availability: MyString
+  performance_field: MyString
+
+two:
+  name: MyString
+  last_name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  number: 1
+  phone: MyString
+  mobile: MyString
+  e-mail: MyString
+  category: MyString
+  business: MyString
+  area_of_​​expertise: MyString
+  business_phone: MyString
+  availability: MyString
+  performance_field: MyString

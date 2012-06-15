@@ -1,5 +1,5 @@
 body{
-	background-image:url(../images/bg_cadastro.jpg);
+	background-image:url(../images/bg_pesquisa.jpg);
 	background-position:center top;
 	background-repeat:no-repeat;
 	}
@@ -37,14 +37,7 @@ body{
 	margin-right:40px;
 	
 	}
-	
-.a_text1, h2 {
-font-family: Arial, Helvetica, sans-serif;
-color: #FEFEFE;
-font-size: 12px;
-margin-top: 20px;
-line-height: 20px;
-}
+
 #a_text p{
 	font-family:Arial, Helvetica, sans-serif;
 	color:#fefefe;
@@ -55,23 +48,15 @@ line-height: 20px;
 
 #a_content1{
 	margin:0 auto;
-	height:525px;
+	height:305px;
 	width:388px;
 	margin-top:72px;
+	padding-top:10px;
 	}
 
 #a_content1 img{
 	margin-top:20px;
 	margin-bottom:20px;
-	}
-
-label{
-	color:#708e95;
-	font-size:14px;
-	font-family:Arial, Helvetica, sans-serif;
-	text-transform:uppercase;
-	margin-left:10px;
-	
 	}
 
 .a_content1_input{
@@ -82,7 +67,6 @@ label{
 	border:1px solid transparent;
 	width:378px;
 	height:37px;
-	margin-top:5px;
 	margin-bottom:5px;
 	padding-left:10px;
 	color:#708e95;
@@ -99,6 +83,7 @@ label{
 	border:1px solid transparent;
 	width:209px;
 	height:37px;
+	margin-bottom:5px;
 	padding-left:10px;
 	color:#708e95;
 	font-size:14px;
@@ -115,6 +100,7 @@ label{
 	border:1px solid transparent;
 	width:150px;
 	height:37px;
+	margin-bottom:5px;
 	padding-left:10px;
 	color:#708e95;
 	font-size:14px;
@@ -127,29 +113,7 @@ label{
 #a_content2{
 	margin:0 auto;
 	height:665px;
-	width:388px;
-	margin-top:180px;
-	}
-
-#a_content2 img{
-	margin-top:30px;
-	margin-bottom:20px;
-	}
-
-.a_content2_input{
-	background-image:url(../images/bg_form.png);
-	background-position:center top;
-	background-repeat:no-repeat;
-	background-color:transparent;
-	border:1px solid transparent;
-	width:378px;
-	height:37px;
-	margin-bottom:5px;
-	padding-left:10px;
-	color:#708e95;
-	font-size:14px;
-	font-family:Arial, Helvetica, sans-serif;
-	text-transform:uppercase;
+	margin-top:50px;
 	}
 
 #footer{
@@ -180,4 +144,26 @@ label{
 	text-decoration:none;
 	margin-left:10px;
 	margin-right:10px;
+	}
+
+#box_resultado{
+	width:940px;
+	margin:0 auto;
+	margin-top:20px;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 10px 20px;
+	border-radius: 10px;
+	}
+
+#box_resultado p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFFFFF;
+	line-height:16px;
+	}
+
+.bt_contato{
+	float:right;
+	text-align:right;
+	margin-top:20px;
 	}

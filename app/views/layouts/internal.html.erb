@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= content_for?(:title) ? "Ecoverde - " + yield(:title) : "Ecoverde" %></title>
+<%= stylesheet_link_tag "reset.css"%>
+<%= stylesheet_link_tag "cadastro.css"%>
+<%= stylesheet_link_tag "dropkick.css"%>
+<%= stylesheet_link_tag "../javascripts/fancybox/jquery.fancybox.css"%>
+<%= stylesheet_link_tag "validationEngine.jquery.css" %>
+<%= javascript_include_tag "jquery.js" %>
+<script>
+jQuery.noConflict();
+</script>
+<%= javascript_include_tag "jquery.dropkick-1.0.0.js" %>
+<%= javascript_include_tag "scrollability.min.js" %>
+<%= javascript_include_tag "fancybox/jquery.fancybox.js" %>
+<%= javascript_include_tag "jquery.validationEngine-en.js" %>
+<%= javascript_include_tag "jquery.validationEngine.js" %>
+<%= yield :head %>
+
+<script>
+	jQuery(document).ready(function(e) {
+		jQuery('.uf').dropkick();
+		jQuery('.categoria').dropkick();
+        jQuery('.area').dropkick();
+        jQuery('.disponibilidade').dropkick();
+       jQuery('.atuacao').dropkick();
+    });
+	jQuery(document).ready(function(){
+
+			// binds form submission and fields to the validation engine
+
+			jQuery("#formID").validationEngine();
+
+		});
+    jQuery('#email1').validationEngine('hide');
+
+
+		/**
+
+		*
+
+		* @param {jqObject} the field where the validation applies
+
+		* @param {Array[String]} validation rules for this field
+
+		* @param {int} rule index
+
+		* @param {Map} form options
+
+		* @return an error string if validation failed
+
+		*/
+
+		function checkHELLO(field, rules, i, options){
+
+			if (field.val() != "HELLO") {
+
+				// this allows to use i18 for the error msgs
+
+				return options.allrules.validate2fields.alertText;
+
+			}
+
+		}
+            
+		// This method is called right before the ajax form validation request
+		// it is typically used to setup some visuals ("Please wait...");
+		// you may return a false to stop the request 
+		function beforeCall(form, options){
+			if (window.console) 
+			console.log("Right before the AJAX form validation call");
+			return true;
+		}
+            
+		// Called once the server replies to the ajax form validation request
+		function ajaxValidationCallback(status, form, json, options){
+			if (window.console) 
+			console.log(status);
+                
+			if (status === true) {
+				alert("the form is valid!");
+				// uncomment these lines to submit the form to form.action
+				// form.validationEngine('detach');
+				// form.submit();
+				// or you may use AJAX again to submit the data
+			}
+		}
+            
+		jQuery(document).ready(function(){
+			jQuery("#formID").validationEngine({
+				ajaxFormValidation: true,
+				onAjaxFormComplete: ajaxValidationCallback,
+			});
+		});
+  </script>
+</head>
+<body>
+<div id='section'>
+	<div id='header'>
+    	<div id='h_logo'>
+        	<%= link_to image_tag("logo.png"), root_path %>
+        </div>
+        <div id='h_info'>
+        	<%= link_to image_tag("bt_como_funciona.png"), root_path %>
+        </div>
+    </div>
+    <%= yield %>
+    
+    <div id='footer'>
+        
+    	<div id='f_left'>
+        	<p>ecoverde © Todos os direitos reservados</p>
+        </div>
+        <div id='f_right'>
+        	<%= link_to "termos", "#" %>|<%= link_to "política", "#" %><%= link_to image_tag("bt_facebook.png"), "#" %>
+    </div>
+    
+</div>
+</div>
+</body>
+</html>
