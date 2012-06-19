@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%= content_for?(:title) ? "Ecoverde - " + yield(:title) : "Ecoverde" %></title>
 <%= stylesheet_link_tag "reset.css"%>
-<%= stylesheet_link_tag "cadastro.css"%>
 <%= stylesheet_link_tag "dropkick.css"%>
 <%= stylesheet_link_tag "../javascripts/fancybox/jquery.fancybox.css"%>
 <%= stylesheet_link_tag "validationEngine.jquery.css" %>
@@ -114,7 +113,7 @@ jQuery.noConflict();
         	<p>ecoverde © Todos os direitos reservados</p>
         </div>
         <div id='f_right'>
-        	<%= link_to "termos", "#" %>|<%= link_to "política", "#" %><%= link_to image_tag("bt_facebook.png"), "#" %>
+        	<%= link_to "termos", terms_of_user_index_path %>|<%= link_to "política", privacy_policy_index_path %><%= link_to image_tag("bt_facebook.png"), "#" %>
     </div>
     
 </div>

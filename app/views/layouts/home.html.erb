@@ -5,7 +5,7 @@
 <title><%= content_for?(:title) ? "Ecoverde - " + yield(:title) : "Ecoverde" %></title>
 <%= stylesheet_link_tag "reset.css"%>
 <%= stylesheet_link_tag "home.css"%>
-<%= javascript_include_tag "javascripts/jquery.js" %>
+<%= javascript_include_tag "jquery.js" %>
 <script>
 jQuery.noConflict();
 </script>
@@ -15,10 +15,10 @@ jQuery.noConflict();
 <div id='section'>
 	<div id='header'>
     	<div id='h_logo'>
-        	<a href="index.html"><img src="images/logo.png" border="0"/></a>
+        	<%=link_to image_tag("logo.png"), root_path%>
         </div>
         <div id='h_info'>
-        	<a href="comofunciona.html"><img src="images/bt_como_funciona.png" border="0"/></a>
+        	<%=link_to image_tag("bt_como_funciona.png"), howitwork_index_path%>
         </div>
     </div>
     <div id='article'>
@@ -38,7 +38,7 @@ jQuery.noConflict();
         	<p>ecoverde © Todos os direitos reservados</p>
         </div>
         <div id='f_right'>
-        	<a href="providers">termos</a>|<a href="#">política</a><a href="#"><img src="images/bt_facebook.png" border="0"/></a>
+        	<%= link_to "termos", terms_of_user_index_path %>|<%= link_to "política", privacy_policy_index_path %><%= link_to image_tag("bt_facebook.png"), "#" %>
         </div>
     </div>
 </div>

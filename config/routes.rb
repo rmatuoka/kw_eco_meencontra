@@ -1,5 +1,11 @@
 KwEcoMeencontra::Application.routes.draw do
 
+  get "privacy_policy/index"
+
+  get "terms_of_user/index"
+
+  get "howitwork/index"
+
   get "search/index"
 
   resources :providers
