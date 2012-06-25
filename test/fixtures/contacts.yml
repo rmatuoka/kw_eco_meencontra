@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  e_mail: MyString
+  message: MyText
+  provider_id: 1
+
+two:
+  name: MyString
+  e_mail: MyString
+  message: MyText
+  provider_id: 1

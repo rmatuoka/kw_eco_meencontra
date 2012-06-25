@@ -4,3 +4,17 @@
 	margin:100px auto;
 	height:500px;
 }
+.terms_of_use h3 {
+    color: #FEFEFE;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 20px;
+}
+.terms_of_use p {
+    color: #FEFEFE;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+}

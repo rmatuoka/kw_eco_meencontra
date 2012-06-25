@@ -147,11 +147,14 @@ body{
 	}
 
 #box_resultado{
+	position:relative;
 	width:940px;
+	min-height:120px !important;
+	height:auto !important;
 	margin:0 auto;
 	margin-top:20px;
 	background: rgba(0, 0, 0, 0.2);
-	padding: 10px 20px;
+	padding: 10px 20px 16px 20px;
 	border-radius: 10px;
 	}
 
@@ -163,7 +166,8 @@ body{
 	}
 
 .bt_contato{
-	float:right;
+	position:absolute;
+	right:20px;
+	bottom:20px;
 	text-align:right;
-	margin-top:20px;
 	}

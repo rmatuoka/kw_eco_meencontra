@@ -1,0 +1,33 @@
+<%content_for :head do%>
+	<%= stylesheet_link_tag "pesquisa.css" %>
+<%end%>
+
+    <div id='article'>
+    	<div id='a_text'>
+        	<%= image_tag("tit_encontre.png")%>
+            <p>Selecione no formulário abaixo as opções que correspondem com o perfil do profissional que você procura.</p>
+        </div>
+    	<div id='a_content1'>        	
+            <%=form_tag results_search_index_path, :method => :post%>               
+                <%= collection_select :search, :cidade, @Cidades, :city, :city,{:prompt => "CIDADE", :size=>"10"}, :class => "categoria dk" %>                
+                <%= collection_select :search, :categoria, @Categorias, :category, :category,{:prompt => "ESTADO", :size=>"10"}, :class => "categoria dk" %>                
+                <%= collection_select :search, :atuacao, @Atuacao, :area_of_​​expertise, :area_of_​​expertise,{:prompt => "AREA DE ATUAÇÃO", :size=>"10"}, :class => "area dk" %>                
+                <%= collection_select :search, :disponibilidade, @Disponibilidade, :availability, :availability,{:prompt => "DISPONIBILIDADE", :size=>"10"}, :class => "disponibilidade dk" %>
+                <%=image_submit_tag("bt_pesquisar.png", :style => "float:right;")%>
+            </form>
+        </div>
+        <div id='a_content2'>
+        	<%= image_tag("tit_resultados.png")%>
+                
+                <%@Resultados.each do |r|%>
+                    <div id="box_resultado">
+                        <p><%=r.name%><br />
+                        In convallis magna eget augue luctus sit amet feugiat ipsum euismod. Fusce euismod, turpis ut bibendum rhoncus, libero mauris dapibus est, quis elementum nisi diam non arcu.<br />Curabitur congue dictum turpis, vel tincidunt enim adipiscing vel. Sed pulvinar aliquam risus, vitae aliquet mauris convallis vel. <br />
+                        <%= link_to image_tag("bt_contato.png", :class =>"bt_contato fancybox"), new_id_contact_path(r) %>
+                        </p>
+                    </div>
+                <%end%>
+                <div class="clear"></div>
+            </div>
+        </div>
+    

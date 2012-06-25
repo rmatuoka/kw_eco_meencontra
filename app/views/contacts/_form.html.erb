@@ -1,0 +1,15 @@
+
+<%= form_for @contact do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :provider_id, :value => @provider.id%>
+  <p>
+    <%= f.text_field :name ,:value => "nome"  , :class => "input_resultado"%>
+  </p>
+  <p>
+    <%= f.text_field :e_mail ,:value => "e-mail"  , :class => "input_resultado" %>
+  </p>
+  <p>
+    <%= f.text_area :message ,:value => "Mensagem"  , :class => "textarea_resultado" %>
+  </p>
+  <p><%= image_submit_tag ("bt_enviar.png"), :class => "bt_enviar"%></p>
+<% end %>

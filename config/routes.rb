@@ -1,17 +1,24 @@
 KwEcoMeencontra::Application.routes.draw do
 
+  resources :contacts do 
+    member do
+        get 'new_id'
+    end
+  end
   get "privacy_policy/index"
 
   get "terms_of_user/index"
 
   get "howitwork/index"
-
-  get "search/index"
-
   resources :providers
 
   get "home/index"
 
+  resources :search do
+    collection do
+        post 'results'
+    end
+  end
   resources :user_sessions
   resources :users
   resources :password_resets

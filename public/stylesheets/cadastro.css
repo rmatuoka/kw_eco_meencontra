@@ -30,7 +30,13 @@ body{
 	width:960px;
 	height:600px;
 	}
-
+.congratul{
+	width:960px;
+	height:600px;
+	margin:0 auto;
+	margin-top: 266px !important;
+	color:#fff;
+	}
 #a_text{
 	margin-top:50px;
 	margin-left:40px;

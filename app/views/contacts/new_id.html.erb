@@ -1,0 +1,10 @@
+<% title "New Contact" %>
+<%content_for :head do%>
+	<%= stylesheet_link_tag "resultado_pesquisa.css" %>
+<%end%>
+<% if @erro  %>
+	<p>Ocorreu um erro tente novamente!</p>
+<% else %>
+	<h1><%=@provider.name%></h1>
+	<%= render 'form' %>
+<%end%>
