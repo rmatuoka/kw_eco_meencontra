@@ -20,11 +20,16 @@ jQuery.noConflict();
 
 <script>
 	jQuery(document).ready(function(e) {
+		
+		jQuery('.fancybox').fancybox({
+		     'type' : 'iframe'
+		});
+
 		jQuery('.uf').dropkick();
 		jQuery('.categoria').dropkick();
-        jQuery('.area').dropkick();
-        jQuery('.disponibilidade').dropkick();
-       jQuery('.atuacao').dropkick();
+		jQuery('.area').dropkick();
+		jQuery('.disponibilidade').dropkick();
+		jQuery('.atuacao').dropkick();
     });
 	jQuery(document).ready(function(){
 
