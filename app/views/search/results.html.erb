@@ -21,8 +21,11 @@
                 
                 <%@Resultados.each do |r|%>
                     <div id="box_resultado">
-                        <p><%=r.name%><br />
-                        In convallis magna eget augue luctus sit amet feugiat ipsum euismod. Fusce euismod, turpis ut bibendum rhoncus, libero mauris dapibus est, quis elementum nisi diam non arcu.<br />Curabitur congue dictum turpis, vel tincidunt enim adipiscing vel. Sed pulvinar aliquam risus, vitae aliquet mauris convallis vel. <br />
+                        <br />
+                        <p><b>Nome:</b> <%=r.name%><br />
+                        <p><b>Cidade:</b> <%=r.city%><br />
+                        <p><b>Estado:</b> <%=r.state%><br />
+                        <p><b>Area de atuação:</b> <%=r.area_of_​​expertise%><br />
                         <%= link_to image_tag("bt_contato.png", :class =>"bt_contato"), new_id_contact_path(r), :class => "fancybox" %>
                         </p>
                     </div>

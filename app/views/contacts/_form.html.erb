@@ -3,13 +3,13 @@
   <%= f.error_messages %>
   <%= f.hidden_field :provider_id, :value => @provider.id%>
   <p>
-    <%= f.text_field :name ,:value => "nome"  , :class => "input_resultado"%>
+    <%= f.text_field :name, :value => "Nome"  , :class => "input_resultado", :onblur=>"if(this.value == '') this.value='Nome';", :onfocus=>"if(this.value=='Nome') this.value='';"%>
   </p>
   <p>
-    <%= f.text_field :e_mail ,:value => "e-mail"  , :class => "input_resultado" %>
+    <%= f.text_field :e_mail, :value => "E-mail"  , :class => "input_resultado", :onblur=>"if(this.value == '') this.value='E-mail';", :onfocus=>"if(this.value=='E-mail') this.value='';" %>
   </p>
   <p>
-    <%= f.text_area :message ,:value => "Mensagem"  , :class => "textarea_resultado" %>
+    <%= f.text_area :message, :value => "Mensagem"  , :class => "textarea_resultado", :onblur=>"if(this.value == '') this.value='Mensagem';", :onfocus=>"if(this.value=='Mensagem') this.value='';" %>
   </p>
   <p><%= image_submit_tag ("bt_enviar.png"), :class => "bt_enviar"%></p>
 <% end %>

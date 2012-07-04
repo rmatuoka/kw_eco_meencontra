@@ -5,6 +5,9 @@
 <% if @erro  %>
 	<p>Ocorreu um erro tente novamente!</p>
 <% else %>
-	<h1><%=@provider.name%></h1>
+	<h1><%=@provider.name%> <%=@provider.last_name%></h1>
+	<p>Tel. Residencial: <%=@provider.phone%></p>
+	<p>Tel. Comercial: <%=@provider.mobile%></p>
+	<p>Tel. Celular: <%=@provider.business_phone%></p>	
 	<%= render 'form' %>
 <%end%>

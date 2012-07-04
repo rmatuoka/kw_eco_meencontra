@@ -26,10 +26,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     if @contact.save
+      UserMailer.send_email_to_provider(@contact).deliver
       redirect_to @contact, :notice => "Successfully created contact."
     else
       render :action => 'new'
     end
+    
   end
 
   def edit

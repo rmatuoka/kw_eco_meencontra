@@ -1,21 +1,20 @@
 body{
-	
+ padding-top:20px;
 	}
-
-#resultado_pesquisa h1{
+h1{
 	color:#a3cd39;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:18px;
 	text-transform:uppercase;
 	}
 
-#resultado_pesquisa p{
+p{
 	color:#fff;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
 	}
 
-#resultado_pesquisa h2{
+h2{
 	color:#6d929a;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;

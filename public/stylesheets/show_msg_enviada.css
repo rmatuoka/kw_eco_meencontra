@@ -2,22 +2,10 @@ body{
 	background-image:url(../images/bg_cadastro.jpg);
 	background-position:center top;
 	background-repeat:no-repeat;
+	overflow:hidden;
 	}
 
-/* para aparecer  os selects até resolver o bug  */
-				.dk_fouc select {
-				position: relative;
-				top: 0em !important;
-				visibility: visible !important;
-				background:transparent !important;
-				color:#708E95 !important;
-				border:#708E95 1px solid !important;
-				}
-				label {
-				display:inline !important;
-				}
 
-/* para aparecer  os selects até resolver o bug  */
 #section{
 	width:960px;
 	margin:0 auto;
